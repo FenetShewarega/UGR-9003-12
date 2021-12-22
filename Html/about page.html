@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)file:///C:/Users/Dan/Downloads/about%20page.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/c8e4d183c2.js"> </script>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=sofia">
+	<title>about page</title>
+	<style>
+
+ @media only screen and (max-width: 600px) {
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+
+nav .resp {
+    float: none;
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    right: 0;
+    top: 100px;
+    bottom: 100%;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgba(0,0,0,.8);
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: all .5s ease-in-out;
+  }
+nav .resp a {
+    font-size: 20px;
+  }
+  nav :checked ~ .resp {
+    bottom: 0;
+  }
+  nav .humburger{
+    display: block;
+  }
+  nav :checked ~ .humburger .line:nth-child(1) {
+    transform: translateY(10px) rotate(225deg);
+  }
+  nav :checked ~ .humburger .line:nth-child(3) {
+    transform: translateY(-10px) rotate(-225deg);
+  }
+  nav :checked ~ .humburger .line:nth-child(2) {
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .icon {
+    display: block;}
+    .help{
+      display:inline-block;
+    }
+    .school-1{
+      display: block;
+    }
+     .school-2{
+      display: block;
+    }
+    
+     .school-3{
+      display: block;
+    }
+    
+      .grid-container{
+
+      display: block;
+    }
+    
+    }
+
+
+
+		body{
+        background:url(chance.JPG);
+        background-repeat: no-repeat;
+        background-position: center;
+        }
+.icon{
+	list-style-type: none;
+ 	margin:0;
+ 	overflow: hidden;
+ 	padding:0; 
+ 	position: fixed;
+ 	display:flex;
+ 	top:0;
+ 	right:0;
+ 	width:100;
+ 	background:black;
+     }
+.item1 { grid-area: header;
+	     background-color:black;
+       }
+.item2 { grid-area: left;
+      }
+.item3 { grid-area: main;
+            left:50%; 
+            display: flex-column;
+        }
+.item4 { grid-area: right; 
+            margin-left: 75%;
+            margin-top:20%; }
+.item5{ grid-area: footer;
+  bottom: 0;
+
+           }
+.grid-container {
+grid-template-areas:
+    'header  header header'
+    'left  main  right'
+    'footer  footer footer';
+
+	grid-template-columns:  auto auto auto;
+	grid-template-rows: auto 80% auto;
+	display:grid;
+  grid-gap: 10px;
+  padding: 10px 0px;
+}
+
+.grid-container > div {
+  
+  text-align: center;
+  padding: 45px 0;
+  font-size: 30px;}
+ .resp{
+ 	list-style-type: none;
+ 	margin:0;
+ 	background:black;
+ 	position: fixed;
+    right: 0;
+ 	top:8%;
+ 	width: 100%;
+ 	display:flex;
+ 	text-align: center;
+
+
+}
+ .icon li a{
+display: inline-block;
+color: white;
+text-align:center ;
+padding:8px 10px;
+text-decoration: none;}
+
+.resp li a{
+	 width: 60px;
+  height: 60px;
+  background: black;
+  transition: width 2s;
+  font-size:0.8em;
+display: inline-block;
+color: white;
+text-align:center ;
+padding:6px 50px;
+text-decoration: none;}
+
+
+li a:hover:not(active)
+{
+	width:150px;
+	background-color:gray;
+}
+.contact{
+  width:100%;
+  padding: 2px 20px;
+  margin: 8px 0;
+  color: gray;
+  box-sizing: content-box;
+  font-size: 0.8em;
+}
+
+li a.active{
+	background-color:darkgray;}
+.help{
+    
+	list-style-type: none;
+ 	margin:0;
+ 	overflow: hidden;
+ 	padding:0; 
+ 	display:flex;
+    margin-left:50%;
+                }
+ .help li a {
+display: inline-block;
+color: white;
+text-align:center ;
+padding:8px 10px;
+text-decoration: none}
+
+p{
+	font-size: 0.5em;
+	color:gray;
+
+}
+.school-1{
+	display:flex;
+	color: white;
+
+
+}
+.school-2{
+	display:flex;
+    z-index:-1; 
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+
+
+
+}
+.school-3{
+	display:flex;
+	color: white;
+  
+
+}
+.link{
+  color:darkgray;
+  font-size:0.6em;
+}
+</style>
+</head>
+<body>
+	<div class="grid-container">
+<div class="item1 col-1">
+<header>
+  <ul class="icon">
+  	<li><a href="file:///C:/Users/Dan/Documents/ublime/about.Html#"><i class="fab fa-youtube"></i></a></li>
+         <li><a href="file:///C:/Users/Dan/Documents/ublime/about.Html#"><i class="fab fa-facebook-f"></i></a></li>
+         <li><a href="file:///C:/Users/Dan/Documents/ublime/about.Html#"><i class="fab fa-twitter"></i></a></li>
+         <li><a href="file:///C:/Users/Dan/Documents/ublime/about.Html#"><i class="fab fa-instagram"></i></a></li>	
+</ul>
+ <nav>
+  <input id="nav-toggle" type="checkbox">
+
+  	<ul class="resp">
+ <li><a href="homepage.hyml.Html"> home</a></li>
+ <li><a href="contact.Html"> contact</a></li>
+ <li><a class="education status.Html"> education status</a></li>
+ <li><a href="plan.Html"> plan</a></li>
+ <li><a href="event.Html"> event</a></li>
+ <li><a href="about page.Html"> about</a></li>
+</ul>
+<label  for=" nav-toggle" class="humburger">
+  <div class='line' ></div>
+    <div class='line' ></div>
+      <div class='line' ></div>
+    </label>
+  </nav>
+  </header></div>
+  <div class="item3">
+
+  	<section class="school-1">
+  	<img src="cot.jpg" width="300" height="200"> <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+	 Id velit ipsa at nostrum suscipit officiis ipsam atque veniam voluptatum minus qui, 
+	harum soluta quam dignissimos tenetur cum dicta, perferendis vel.</p> </section>
+  	<section class="school-2"><img src="cot.jpg" width="400" height="300"></section>
+<section class="school-3"><img src="cot.jpg" width="300" height="200"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+	 Id velit ipsa at nostrum suscipit officiis ipsam atque veniam voluptatum minus qui, 
+</p>
+<br>
+<br>
+<a  class=' link' href="galleryy.Html"><pre>go to gallery<pre></a>
+</section>
+</div>
+<div class="item5">
+	<footer>
+		<br>
+
+		<hr>
+		    <ul class="help">
+        <li><a href="help.html">help</a></li>
+        <li><a href="file:///C:/Users/Dan/Documents/ublime/about.Html#"><i class="fa fa-question"></i></a></li>
+      </ul>  
+
+	</footer>
+	</div>
+
+
+
+
+
+
+</div></body></html>

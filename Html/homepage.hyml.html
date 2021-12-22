@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src=" https://kit.fontawesome.com/c8e4d183c2.js"> </script>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=sofia">
+<style>
+
+@media only screen and (max-width: 600px) {
+  
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+
+nav .resp {
+    float: none;
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    right: 0;
+    top: 100px;
+    bottom: 100%;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgba(0,0,0,.8);
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: all .5s ease-in-out;
+  }
+nav .resp a {
+    font-size: 20px;
+  }
+  nav :checked ~ .resp {
+    bottom: 0;
+  }
+  nav .humburger{
+    display: block;
+  }
+  nav :checked ~ .humburger .line:nth-child(1) {
+    transform: translateY(10px) rotate(225deg);
+  }
+  nav :checked ~ .humburger .line:nth-child(3) {
+    transform: translateY(-10px) rotate(-225deg);
+  }
+  nav :checked ~ .humburger .line:nth-child(2) {
+    opacity: 0;
+  }
+}
+
+body{
+
+        margin:10px;
+        background:url(chance.JPG);
+        background-repeat: no-repeat;
+        background-position: center;
+}
+.icon{
+	list-style-type: none;
+ 	margin:0;
+ 	overflow: hidden;
+ 	padding:0; 
+ 	position: fixed;
+ 	display:flex;
+ 	top:0;
+ 	right:0;
+ 	width:100;
+ 	background:black;
+
+}
+.item1 { grid-area: header;
+
+	     background-color:black;
+         
+          }
+.item2 { grid-area: menu;
+
+         
+      }
+.item3 { grid-area: main;
+            }
+.item4 { grid-area:right; 
+            margin-left:50%;
+            margin-top:20%; }
+
+.item5{ grid-area:left;
+ }          
+.item6{ grid-area: footer;
+	padding:0;
+
+           }
+.grid-container {
+  position:relative;
+  grid-template-areas:
+    'header header header header '
+    ' left menu  main  right'
+    ' footer footer footer footer';
+
+	grid-template-columns: 5% auto auto auto;
+	grid-template-rows: auto auto auto;
+	display: grid;
+      grid-gap: 10px;
+     padding: 0px 0px;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 40px 0;
+  font-size: 20px;}
+.resp{
+ 	list-style-type: none;
+ 	margin:0;
+ 	background:black;
+ 	position: fixed;
+    right:0;
+ 	top:7%;
+ 	width: 100%;
+ 	display:flex;
+ 	text-align: center;
+
+
+}
+
+ .icon li a{
+display: inline-block;
+color: white;
+text-align:center ;
+padding:8px 10px;
+text-decoration: none;}
+
+.resp li a{
+   width: 60px;
+  height: 60px;
+  background: black;
+  transition: width 2s;
+display: inline-block;
+color: white;
+text-align:center ;
+padding:6px 50px;
+text-decoration: none;}
+
+
+li a:hover:not(active)
+{
+  width:150px;
+	background-color:gray;
+}
+.active{
+	background-color:darkgray;
+}
+.description{
+	font-family:"sofia",sans-serif; 
+	font-size:0.7em;
+	color: white;
+}
+.help{
+
+	list-style-type: none;
+ 	margin:0;
+ 	overflow: hidden;
+ 	padding:0; 
+    position:center	;
+ 	display:flex;
+ 	margin-left: 50%;
+ 	
+ 	
+
+}
+.help li a{
+
+display: inline-block;
+color: white;
+text-align:center ;
+padding:8px 10px;
+text-decoration: none
+
+}
+.vl
+{
+  margin-left: 10%
+  border-left: 6px solid white;
+  
+}
+
+.image{
+  
+margin-left:5%;
+margin-top:30%;
+border-top-left-radius: 50%;
+border-bottom-right-radius: 50%;
+z-index: -1;
+	}
+	.transition
+	{
+		 width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  transition: width 0.4s ease-in-out;
+	}
+	.transition:focus{
+		width: 100%;
+	}
+.name{
+	color: white;
+	margin-left:10%;
+	text-shadow:1px 1px 2px pink ,0 0 25px blue ,0 0 5px darkblue; 
+
+	}
+	hr{
+		border-width: 6px
+		background-color:white;
+	}
+	h2{
+		font-size: 60px:
+		;
+	}
+	p{
+		color: gray;
+	}
+ #nav-toggle{
+  position: absolute;
+ }
+ nav.humburger{
+  display: none;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+ }
+ nav.humburger.line{
+  width: 30px;
+  height: 5px;
+  color: white;
+  margin: 5px;
+  border-radius: 3px;
+  transition: all .3s ease-in-out;
+
+ }
+
+@media screen and (max-width: 500px) {
+  .icon {
+    display: block;}
+    .help{
+      display:inline;
+    }
+    
+  
+</head>
+</style>
+
+<body>
+<div class="grid-container">
+
+ <div class="item1">
+  <header>
+  	<ul class= "  col-3  icon">
+  		<li ><a href="#"><i class="fab fa-youtube"></i></a></li>
+         <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+         <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+         <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+
+	
+</ul>
+<nav >
+  <input id="nav-toggle" type="checkbox">
+
+  	<ul class = "resp">
+    <li ><a class = " active" href="homepage.hyml.html" > home</a></li>
+    <li ><a href="contact.html" > contact</a></li>
+    <li ><a href="education status.html"> education status</a></li>
+    <li ><a href="plan.html" > plan</a></li>
+    <li ><a href="event.html" > event</a></li>
+    <li ><a href="about page.html" > about</a></li>
+</ul>
+<label  for=" nav-toggle" class="humburger"> 
+  <div class='line' ></div>
+    <div class='line' ></div>
+      <div class='line' ></div>
+</label>
+  </nav>
+  </header>
+  
+  
+  
+  
+  </div>
+</div>
+<div class=" col-3 col-s-3 right">
+  <div class="item2">
+  	
+  
+  <img  class ="image" src="C:\Users\Dan\Documents\ublime\beti.jpg" width="300px" height="270px">
+  <h1 class="name"> Fenet Shewarega</h1>
+  <H2 class=" vertical">HELLO</H2>
+
+
+  </div>
+</div>
+  <div class="item3">
+    
+  </div> 
+
+ <div class=" col-6">
+  <div class="item4">  <form class="search" >
+  	<input class="transition" type ="tetx" placeholder=" search.." name="search " >
+  	<button type ="submit"><i class = "fa fa-search"></i></button>
+  </form>
+  <p class=" description">CSS is the language we use to style an HTML document.
+CSS describes how HTML elements should be displayed.
+This tutorial will teach you CSS from basic to advanced</p></div></div>
+
+<div class="item-5">
+	
+  </div>
+  
+  <div class="item6">
+
+  	<footer>
+  		<div class="vl"></div>
+  		<hr>
+  		<ul class= "help">
+  		  <li><a href="help.html">help</a></li>
+  		  <li><a href="#"><i class="fa fa-question"></i></a></li>
+  		</ul>
+  	</footer>
+
+  </div>
+
+
+</div>
+</body>
+</html>
+
+
